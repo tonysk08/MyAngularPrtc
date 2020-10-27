@@ -1,0 +1,36 @@
+<h1>Mi primera prueba esta andando</h1>
+<form (submit)=AddUser(newUser)>
+    <input type="text" #newUser>
+    <button>SendUser</button>
+</form>
+<ul *ngFor="let user of users">
+    <li>
+        {{user}}
+        <button (click)="SayHello(user)">
+            Click Me
+        </button>
+        <button (click)="DeletUser(user)">
+            Delet
+        </button>
+    </li>
+</ul>
+
+<div>
+    <form>
+        Nombre:
+        <input type="text" name="name" [(ngModel)]="name">
+        <br>
+        Edad:
+        <input type="text" name="age" [(ngModel)]="age">
+    </form>
+    name: {{name}}
+    <br>
+    age:  {{age}}
+</div>
+
+<hr>
+
+<div *ngFor="let post of posts">
+    <h3>{{post.title}}</h3>
+    <p>{{post.body}}</p>
+</div>
